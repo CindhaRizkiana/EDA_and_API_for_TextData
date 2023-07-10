@@ -1,0 +1,17 @@
+tags:
+  - name: Clean CSV
+get:
+  description: Data cleansing systems in CSV file by removing special characters and converting them to lowercase, it also remove unnecessary characters like 'username' and 'RT'
+parameters:
+- name: input_csv_file
+  in: formData
+  type: file
+  required: true
+  description: CSV file to be cleansed
+responses:
+  200:
+    description: The text uploaded successfully cleansed
+  400:
+    description: Invalid input text
+  500:
+    description: Internal Server Error
